@@ -10,10 +10,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Google Maps',
       theme: ThemeData(
-        primaryColor:Color(0xff6200ee),
+        primaryColor: Color(0xff6200ee),
       ),
-      home:homePage(),
+      home: homePage(),
     );
-
   }
 }

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -42,7 +43,7 @@ class HomePageState extends State<HomePage> {
         // ALL COMEPONENTS SEPERATED INTO WIDGETS HERE
 
         children: <Widget>[
-          _googlemap(context),
+          _googleMap(context),
           // _zoomminusfunction(),
           // _zoomplusfunction(),
           _buildContainer( ),
@@ -55,21 +56,30 @@ class HomePageState extends State<HomePage> {
 
 Widget _buildContainer() {  
   return Align(
-    alignment: Alignment.bottomleft,
+    alignment: Alignment.bottomLeft, 
     child: Container(
       margin: EdgeInsets.symmetric(vertical:20.0),
       height:150.0,
       
       //LIST VIEW ADDED HERE
-      child:listView(
-
+      child:ListView(
+        scrollDirection:Axis.horizontal,
+        children:<Widget>[
+              SizedBox(width:10.0),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:boxes (
+                  ""
+                ),
+              ),
+        ],
       ),
     ),
   );
 }
 
 
-  Widget _googlemMap(BuildContext context) {
+  Widget _googleMap(BuildContext context) {
     return Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
