@@ -66,12 +66,36 @@ Widget _buildContainer() {
         scrollDirection:Axis.horizontal,
         children:<Widget>[
               SizedBox(width:10.0),
+ 
+ //BOX 1
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child:boxes (
-                  ""
+                child:_boxes (
+                  "assets/swim.jpg" , 
+                  31.4756, 74.3424, "Lahore Swimming Pool"
+                  ),
                 ),
-              ),
+              
+            SizedBox(width:10.0),
+//BOX 2
+               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:_boxes (
+                  "assets/swim2.jpg" , 
+                  31.4756, 74.3424, "Lahore Swimming Pool"
+                  ),
+                ),
+             
+            SizedBox(width:10.0),
+//BOX 3
+               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:_boxes (
+                  "assets/swim3.jpg" , 
+                  31.4756, 74.3424, "Lahore Swimming Pool"
+                  ),
+                ),
+             
         ],
       ),
     ),
