@@ -49,7 +49,11 @@ class HomePageState extends State<HomePage> {
           _buildContainer( ),
         ],
       ),
+
+ 
+
     );
+
   }
 
 // CONTAINER FOR LIST VIEW
@@ -66,13 +70,15 @@ Widget _buildContainer() {
         scrollDirection:Axis.horizontal,
         children:<Widget>[
               SizedBox(width:10.0),
+
+              //FITTED BOX
  
  //BOX 1
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child:_boxes (
                   "assets/swim.jpg" , 
-                  31.4756, 74.3424, "Lahore Swimming Pool"
+                  31.4756, 74.3424, "Lahore 1 Swimming Pool"
                   ),
                 ),
               
@@ -82,7 +88,7 @@ Widget _buildContainer() {
                 padding: const EdgeInsets.all(8.0),
                 child:_boxes (
                   "assets/swim2.jpg" , 
-                  31.4756, 74.3424, "Lahore Swimming Pool"
+                  31.4756, 74.3424, "Lahore 2 Swimming Pool"
                   ),
                 ),
              
@@ -92,15 +98,42 @@ Widget _buildContainer() {
                 padding: const EdgeInsets.all(8.0),
                 child:_boxes (
                   "assets/swim3.jpg" , 
-                  31.4756, 74.3424, "Lahore Swimming Pool"
+                  31.4756, 74.3424, "Lahore 3 Swimming Pool"
                   ),
                 ),
-             
+    
         ],
       ),
+
     ),
+// StyledBox(width:10.0),
+//   TextButton(
+//   style: ButtonStyle(
+//     foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+//   ),
+//   onPressed: () { },
+//   child: Text('Confirm Location'),
+),
+  
   );
 }
+
+Widget _boxed(String _image, double lat,double long , String resutantName) {
+  return GestureDetector(
+    onTap: () {
+      //GOES TO LOCATION ON MAP ON TAP
+      _gotolocation(lat,long);
+    }
+  ),
+  child : Container(
+      child: new FittedBox (
+        child : Material()
+      )
+  ),
+}
+
+
+
 
 
   Widget _googleMap(BuildContext context) {
