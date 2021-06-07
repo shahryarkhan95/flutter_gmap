@@ -101,11 +101,19 @@ Widget _buildContainer() {
                   31.4756, 74.3424, "Lahore 3 Swimming Pool"
                   ),
                 ),
-    
+  
+
+             
         ],
       ),
 
+      
     ),
+  
+  );
+}
+
+
 // StyledBox(width:10.0),
 //   TextButton(
 //   style: ButtonStyle(
@@ -113,10 +121,7 @@ Widget _buildContainer() {
 //   ),
 //   onPressed: () { },
 //   child: Text('Confirm Location'),
-),
-  
-  );
-}
+
 
 Widget _boxed(String _image, double lat,double long , String resutantName) {
   return GestureDetector(
